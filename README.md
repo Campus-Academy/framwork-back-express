@@ -9,7 +9,7 @@ Application de Gestion des notes.
 Après le clone du projet
 
 ```
-git clone https://github.com/FlowFactoryCode/hms-hotel-management-system
+git clone https://github.com/Campus-Academy/framwork-back-express
 ```
 
 L'installation des modules et dépendances
