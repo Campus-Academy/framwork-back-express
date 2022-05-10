@@ -1,0 +1,18 @@
+<!--Title-->
+<mat-form-field class="title" appearance="fill">
+  <mat-label>Titre</mat-label>
+  <input matInput placeholder="Ajouter votre titre de note" [(ngModel)]="note.titre">
+</mat-form-field>
+
+<!--Body-->
+<mat-form-field class="body" appearance="fill">
+  <mat-label>Note</mat-label>
+  <textarea matInput placeholder="Description de la note" [(ngModel)]="note.body">{{note.body}}</textarea>
+</mat-form-field>
+
+<div class="center">
+  <!--Reset-->
+  <button mat-raised-button color="warn" (click)="reset()">Reset</button>
+  <!--Save-->
+  <button mat-raised-button color="primary" (click)="save()">Save</button>
+</div>

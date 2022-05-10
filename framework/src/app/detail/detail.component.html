@@ -1,0 +1,26 @@
+<nav>
+  <mat-toolbar color="primary">
+    <span [routerLink]="['/app']"><mat-icon>arrow_back_ios</mat-icon></span>
+  </mat-toolbar>
+</nav>
+<div class="flex-container">
+  <mat-icon class="top-left" *ngIf="edit" (click)="saveNote()">save</mat-icon>
+  <mat-icon class="top-left" (click)="editNote()">edit</mat-icon>
+</div>
+<mat-list *ngIf="!edit">
+  <mat-list-item *ngIf="note.titre"> {{note.titre}} </mat-list-item>
+  <mat-list-item *ngIf="note.status"> {{note.status}} </mat-list-item>
+  <mat-list-item *ngIf="note.document"> {{note.document}} </mat-list-item>
+  <mat-list-item *ngIf="note.createDate" > {{note.createDate | date:'dd/M/yyyy, h:mm a'}} </mat-list-item>
+  <br>
+  <mat-list-item  *ngIf="note.body" > {{note.body}} </mat-list-item>
+</mat-list>
+
+<div *ngIf="edit">
+  <!--Body-->
+  <mat-form-field class="flex-100" appearance="fill">
+    <mat-label>Note</mat-label>
+    <textarea matInput placeholder="Modifier la description de la note" class="area-height" [(ngModel)]="note.body">{{note.body}}</textarea>
+  </mat-form-field>
+</div>
+

@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.wrapContent {
+  overflow-wrap: break-word;
+  max-height: 100px;
+}
+
+.flex-100 {
+  width: 100%;
+}
+
+.area-height {
+  height: 100px;
+}
+
+.chrome-ext-size {
+  width: 100%;
+  overflow-y: auto;
+}
+
+.wrapContent {
+  overflow: auto;
+  height: 40px;
+}

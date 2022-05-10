@@ -1,0 +1,25 @@
+<div *ngFor="let note of this.noteService._notes | waitingNote:'waiting' | keyvalue " style="margin: 5px">
+  <mat-card [routerLink]="['/detail', {name: note.key}]" >
+    <mat-card-title>
+      <div>
+        {{note.key}}
+      </div>
+    </mat-card-title>
+    <mat-card-content>
+      <div class="wrapContent">
+        {{note.value.body}}
+      </div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-button (click)="setStatus(note.value,'progress')">In progress</button>
+      <button mat-button (click)="setStatus(note.value, 'done')">Done</button>
+      <button mat-button (click)="setStatus(note.value, 'archive')">Archive</button>
+      <button mat-button (click)="setStatus(note.value, 'delete')">Delete</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+
+
+
+

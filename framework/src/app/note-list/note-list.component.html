@@ -1,0 +1,35 @@
+<mat-tab-group mat-align-tabs="start" class="chrome-ext-size">
+
+  <mat-tab mat-align-tabs="end" label="Add">
+    <ng-template matTabContent>
+      <app-add></app-add>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab label="Waiting">
+    <ng-template matTabContent>
+      <app-waiting></app-waiting>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab label="Progress">
+    <ng-template matTabContent>
+      <app-progress></app-progress>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab label="Done">
+    <ng-template matTabContent>
+      <app-done></app-done>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab label="Archived">
+    <ng-template matTabContent>
+      <app-archived></app-archived>
+    </ng-template>
+  </mat-tab>
+
+</mat-tab-group>
+
+<router-outlet></router-outlet>
